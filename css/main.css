@@ -2602,7 +2602,7 @@ form textarea:required:valid {
   margin-bottom: 11rem;
 }
 .content__block.block-grid-large {
-  margin-bottom: 10rem;
+  margin-bottom: -3rem;
 }
 @media only screen and (min-width: 768px) {
   .content__block.section-title {
