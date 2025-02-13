@@ -2631,7 +2631,7 @@ form textarea:required:valid {
     margin-bottom: 0.4rem;
   }
   .content__block.block-large {
-    margin-bottom: 14.6rem;
+    margin-bottom: 1.6rem;
   }
   .content__block.block-grid-large {
     margin-bottom: 15rem;
@@ -2642,7 +2642,7 @@ form textarea:required:valid {
     margin-bottom: 5.3rem;
   }
   .content__block.block-large {
-    margin-bottom: 15.6rem;
+    margin-bottom: 1.6rem;
   }
 }
 
