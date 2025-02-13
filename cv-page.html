@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/loaders/loader.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My CV</title>
+
+  <!-- Internal CSS -->
+  <style>
+      ::-webkit-scrollbar {
+        width: 0px; /* Width of the vertical scrollbar */
+        height: 0px; /* Height of the horizontal scrollbar */
+    }
+    /* Gradient Background Styling */
+    .gradient-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Place it behind the content */
+        opacity: 0.8; /* Optional: make the background slightly transparent */
+    }
+
+    .blur {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px); /* Optional: add a blur effect */
+    }
+
+    /* Content Styling */
+    .content-container {
+        position: relative;
+        z-index: 1; /* Keep the content above the gradient */
+        padding: 20px;
+        overflow-x: hidden; /* Prevent horizontal scroll */
+        width: 100%; /* Ensure container takes full width */
+        box-sizing: border-box; /* Include padding and borders in the total width */
+    }
+
+    /* Embed PDF Styling */
+    embed {
+        width: 100%;
+        height: 600px;
+        max-width: 100%; /* Ensure it doesn't overflow horizontally */
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Ensure no horizontal scrollbar on body */
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Disable horizontal scrolling on the entire page */
+    }
+</style>
+</head>
+
+<body>
+  <!-- Gradient Background Start -->
+  <div class="gradient-sbackground">
+    <div class="blur"></div>
+    <div class="blur"></div>
+    <div class="blur"></div>
+  </div>
+  <!-- Gradient Background End -->
+
+  <!-- Content Container -->
+  <div class="content-container">
+    <h1>My CV</h1>
+    <!-- Embed PDF -->
+    <embed src="Sami_Abu_Touq.pdf" width="100%" height="600px" type="application/pdf">
+
+
+  </div>
+</body>
+</html>

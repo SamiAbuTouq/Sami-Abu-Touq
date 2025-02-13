@@ -2612,10 +2612,10 @@ form textarea:required:valid {
     margin-bottom: 1.9rem;
   }
   .content__block.block-large {
-    margin-bottom: 13rem;
+    margin-bottom: 5rem;
   }
   .content__block.block-grid-large {
-    margin-bottom: 13rem;
+    margin-bottom: -5rem;
   }
 }
 @media only screen and (min-width: 1200px) {
