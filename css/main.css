@@ -4687,3 +4687,33 @@ form textarea:required:valid {
   background-color: var(--nav-active-bg);
   border-color: var(--nav-active-border);
 }
+
+/* =========================
+   Projects: make cards smaller
+   ========================= */
+
+/* Center the row and add spacing */
+#projects .my-gallery {
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Make each project card narrower (override Bootstrap col-md-6) */
+@media (min-width: 768px) {
+  #projects .my-gallery > figure.gallery__item {
+    width: 420px !important;
+    max-width: 420px !important;
+    flex: 0 0 auto !important;
+  }
+}
+
+/* Make the image area shorter */
+/* #projects .gallery__link {
+  height: 100%;
+  width: 100%;
+} */
+
+/* Optional: tighten caption padding a bit
+#projects .gallery__descr {
+  padding: 1.8rem 2rem;
+} */
