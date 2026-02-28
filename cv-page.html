@@ -1,84 +1,287 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <link rel="stylesheet" href="css/loaders/loader.css">
-    <link rel="stylesheet" type="text/css" href="css/plugins.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My CV</title>
+  <title>Sami Abu Touq | CV</title>
+  <meta name="description" content="CV of Sami Abu Touq - Computer Science student at Princess Sumaya University for Technology.">
 
-  <!-- Internal CSS -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/avatars/1024x1024_a02.jpeg">
+
+  <!-- Template Styles (same as main site for consistency) -->
+  <link rel="stylesheet" href="css/loaders/loader.css">
+  <link rel="stylesheet" type="text/css" href="css/plugins.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <!-- Custom Browser Color -->
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#dcdce7">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
+
   <style>
-      ::-webkit-scrollbar {
-        width: 0px; /* Width of the vertical scrollbar */
-        height: 0px; /* Height of the horizontal scrollbar */
-    }
-    /* Gradient Background Styling */
-    .gradient-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1; /* Place it behind the content */
-        opacity: 0.8; /* Optional: make the background slightly transparent */
-    }
-
-    .blur {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        backdrop-filter: blur(10px); /* Optional: add a blur effect */
-    }
-
-    /* Content Styling */
-    .content-container {
-        position: relative;
-        z-index: 1; /* Keep the content above the gradient */
-        padding: 20px;
-        overflow-x: hidden; /* Prevent horizontal scroll */
-        width: 100%; /* Ensure container takes full width */
-        box-sizing: border-box; /* Include padding and borders in the total width */
-    }
-
-    /* Embed PDF Styling */
-    embed {
-        width: 100%;
-        height: 600px;
-        max-width: 100%; /* Ensure it doesn't overflow horizontally */
-        border: 2px solid #ddd;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Ensure no horizontal scrollbar on body */
     body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden; /* Disable horizontal scrolling on the entire page */
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      min-height: 100vh;
     }
-</style>
+
+    .cv-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: var(--base-tint);
+      border-bottom: 1px solid var(--stroke-elements);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      font-family: var(--_font-default);
+    }
+
+    .cv-header__left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .cv-header__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: var(--_radius-s);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--t-bright);
+      background: var(--base);
+      border: 1px solid var(--stroke-elements);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-family: var(--_font-default);
+    }
+
+    .cv-header__back:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .cv-header__back i {
+      font-size: 1rem;
+    }
+
+    .cv-header__title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--t-bright);
+      margin: 0;
+      font-family: var(--_font-default);
+    }
+
+    .cv-header__download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1.25rem;
+      border-radius: var(--_radius-s);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #fff;
+      background: var(--accent);
+      border: none;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-family: var(--_font-default);
+    }
+
+    .cv-header__download:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+
+    .cv-header__download i {
+      font-size: 1rem;
+    }
+
+    .cv-body {
+      padding-top: 5rem;
+      min-height: calc(100vh - 5rem);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .cv-embed {
+      width: 100%;
+      max-width: 960px;
+      margin: 1.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .cv-embed iframe {
+      width: 100%;
+      height: calc(100vh - 8rem);
+      border: 1px solid var(--stroke-elements);
+      border-radius: var(--_radius-s);
+      background: #fff;
+    }
+
+    /* Mobile fallback - PDF embed doesn't work well on small screens */
+    .cv-mobile-fallback {
+      display: none;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .cv-mobile-fallback p {
+      color: var(--t-medium);
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      font-family: var(--_font-default);
+    }
+
+    .cv-mobile-fallback .cv-header__download {
+      display: inline-flex;
+      font-size: 1rem;
+      padding: 0.75rem 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .cv-header {
+        padding: 0.75rem 1rem;
+      }
+
+      .cv-header__title {
+        display: none;
+      }
+
+      .cv-header__back span {
+        display: none;
+      }
+
+      .cv-embed {
+        display: none;
+      }
+
+      .cv-mobile-fallback {
+        display: block;
+      }
+    }
+
+    /* Gradient background (reused from main site) */
+    .gradient-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.8;
+    }
+  </style>
 </head>
 
 <body>
+
   <!-- Gradient Background Start -->
-  <div class="gradient-sbackground">
+  <div class="gradient-background">
     <div class="blur"></div>
     <div class="blur"></div>
     <div class="blur"></div>
   </div>
   <!-- Gradient Background End -->
 
-  <!-- Content Container -->
-  <div class="content-container">
-    <h1>My CV</h1>
-    <!-- Embed PDF -->
-    <embed src="Sami_Abu_Touq.pdf" width="100%" height="600px" type="application/pdf">
+  <!-- Header Bar -->
+  <header class="cv-header">
+    <div class="cv-header__left">
+      <a href="index.html" class="cv-header__back" aria-label="Back to portfolio">
+        <i class="ph-bold ph-arrow-left"></i>
+        <span>Back to Portfolio</span>
+      </a>
+      <h1 class="cv-header__title">Curriculum Vitae</h1>
+    </div>
+    <a href="Sami_Abu_Touq.pdf" download class="cv-header__download" aria-label="Download CV as PDF">
+      <i class="ph-bold ph-download-simple"></i>
+      <span>Download PDF</span>
+    </a>
+  </header>
 
+  <!-- PDF Embed (desktop) -->
+  <div class="cv-body">
+    <div class="cv-embed">
+      <iframe src="Sami_Abu_Touq.pdf" title="Sami Abu Touq - CV"></iframe>
+    </div>
 
+    <!-- Mobile Fallback -->
+    <div class="cv-mobile-fallback">
+      <p>PDF preview is not available on mobile devices.<br>Tap the button below to download and view the CV.</p>
+      <a href="Sami_Abu_Touq.pdf" download class="cv-header__download">
+        <i class="ph-bold ph-download-simple"></i>
+        <span>Download CV</span>
+      </a>
+    </div>
   </div>
+
+  <!-- Scripts for gradient animation -->
+  <script src="js/libs.min.js"></script>
+  <script>
+    const randomX = random(-400, 400);
+    const randomY = random(-200, 200);
+    const randomDelay = random(0, 50);
+    const randomTime = random(20, 40);
+    const randomTime2 = random(5, 12);
+    const randomAngle = random(-30, 150);
+
+    const blurs = gsap.utils.toArray(".blur");
+    blurs.forEach((blur) => {
+      gsap.set(blur, {
+        x: randomX(-1),
+        y: randomX(1),
+        rotation: randomAngle(-1)
+      });
+      moveX(blur, 1);
+      moveY(blur, -1);
+      rotate(blur, 1);
+    });
+
+    function rotate(target, direction) {
+      gsap.to(target, randomTime2(), {
+        rotation: randomAngle(direction),
+        ease: Sine.easeInOut,
+        onComplete: rotate,
+        onCompleteParams: [target, direction * -1]
+      });
+    }
+
+    function moveX(target, direction) {
+      gsap.to(target, randomTime(), {
+        x: randomX(direction),
+        ease: Sine.easeInOut,
+        onComplete: moveX,
+        onCompleteParams: [target, direction * -1]
+      });
+    }
+
+    function moveY(target, direction) {
+      gsap.to(target, randomTime(), {
+        y: randomY(direction),
+        ease: Sine.easeInOut,
+        onComplete: moveY,
+        onCompleteParams: [target, direction * -1]
+      });
+    }
+
+    function random(min, max) {
+      const delta = max - min;
+      return (direction = 1) => (min + delta * Math.random()) * direction;
+    }
+  </script>
+
 </body>
 </html>
