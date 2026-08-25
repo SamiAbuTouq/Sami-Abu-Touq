@@ -44,11 +44,17 @@ $(function () {
   // --------------------------------------------- //
   const content = document.querySelector("body");
   const imgLoad = imagesLoaded(content);
+  let loaderHidden = false;
 
-  imgLoad.on("done", (instance) => {
-    document.getElementById("loaderContent").classList.add("fade-out");
+  const hideLoader = () => {
+    if (loaderHidden) return;
+    loaderHidden = true;
+
+    const loaderContent = document.getElementById("loaderContent");
+    const loader = document.getElementById("loader");
+    if (loaderContent) loaderContent.classList.add("fade-out");
     setTimeout(() => {
-      document.getElementById("loader").classList.add("loaded");
+      if (loader) loader.classList.add("loaded");
     }, 300);
 
     gsap.set(".animate-headline", { y: 50, opacity: 0 });
@@ -71,7 +77,11 @@ $(function () {
       onLeaveBack: (batch) =>
         gsap.set(batch, { opacity: 0, y: 50, overwrite: true }),
     });
-  });
+  };
+
+  // "done" never fires if any image 404s or a CDN hangs (Devicon via jsDelivr).
+  imgLoad.on("always", hideLoader);
+  setTimeout(hideLoader, 3500);
   // --------------------------------------------- //
   // Loader & Loading Animation End
   // --------------------------------------------- //

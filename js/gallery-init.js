@@ -27,7 +27,11 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 continue;
             }
 
-            linkEl = figureEl.children[0]; // <a> element
+            linkEl = figureEl.querySelector('.gallery__link') || figureEl.children[0];
+
+            if (!linkEl || !linkEl.getAttribute('data-size')) {
+                continue;
+            }
 
             size = linkEl.getAttribute('data-size').split('x');
 
@@ -65,9 +69,18 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
     // triggers when user clicks on thumbnail
     var onThumbnailsClick = function(e) {
         e = e || window.event;
-        e.preventDefault ? e.preventDefault() : e.returnValue = false;
-
         var eTarget = e.target || e.srcElement;
+
+        // Only intercept if the user clicked inside a .gallery__link (View Certificate / Gallery link)
+        var galleryLink = closest(eTarget, function(el) {
+            return (el.classList && el.classList.contains('gallery__link'));
+        });
+
+        if (!galleryLink) {
+            return; // Allow normal link clicks (like Show credential) to work normally
+        }
+
+        if (e.preventDefault) e.preventDefault();
 
         // find root element of slide
         var clickedListItem = closest(eTarget, function(el) {

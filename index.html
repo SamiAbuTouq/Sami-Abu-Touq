@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="css/loaders/loader.css" />
     <link rel="stylesheet" type="text/css" href="css/plugins.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <!-- Devicon CDN for tech icons -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <!-- Template Styles End -->
 
     <!-- Custom Browser Color Start -->
@@ -274,9 +276,10 @@
               <span>Let's meet!</span>
             </p>
             <h1 class="headline__title animate-headline">
-              I'm Sami Abu Touq<br />
-              a Fresh CS Graduate | Software Developer
+              I'm Sami Abu Touq
             </h1>
+            <p class="headline__description animate-headline" style="max-width: 620px; margin-top: 1rem; margin-bottom: 2rem; color: var(--t-muted); font-size: 1.8rem; line-height: 1.5;">
+              Ex-Dynamics CRM Developer Intern @ DI | Fresh CS Graduate from PSUT            </p>
             <div class="headline__btnholder d-flex flex-column flex-sm-row">
               <a
                 class="btn mobile-vertical btn-default btn-hover btn-hover-accent-mobile animate-headline"
@@ -285,13 +288,6 @@
                 <span class="btn-caption">My Works</span>
                 <i class="ph-bold ph-squares-four"></i>
               </a>
-              <!-- <a class="btn mobile-vertical btn-default btn-hover btn-hover-outline-mobile animate-headline" href="cv-page.html">
-                   open the pdf page  
-              a class="btn mobile-vertical btn-default btn-hover btn-hover-outline-mobile animate-headline" href="Sami_Abu_Touq.pdf">  open the pdf directly
-                <span class="btn-caption ">My CV</span>
-                <i class="ph-bold ph-download-simple"></i>
-              </a>    
-            -->
 
               <a
                 class="btn mobile-vertical btn-default btn-hover btn-hover-accent"
@@ -513,6 +509,7 @@
                 </div>
                 <div class="col-12 col-md-4">
                   <h5 class="resume-lines__title animate-in-up">Property Rental Management System</h5>
+                    <br>
                   <p class="resume-lines__source animate-in-up">Microsoft Dynamics 365 CRM</p>
                 </div>
                 <div class="col-12 col-md-5">
@@ -532,7 +529,10 @@
                 </div>
                 <div class="col-12 col-md-4">
                   <h5 class="resume-lines__title animate-in-up">Smart University Timetabling System</h5>
+                  <br>
                   <p class="resume-lines__source animate-in-up">Grey Wolf Optimizer (GWO)</p>
+                  <p class="resume-lines__source animate-in-up">Constraint Satisfaction</p>
+                  <p class="resume-lines__source animate-in-up">Multi-Objective Optimization</p>
                 </div>
                 <div class="col-12 col-md-5">
                   <p class="small resume-lines__descr animate-in-up">
@@ -898,28 +898,46 @@
             <h2 class="h2__title animate-in-up">My Professional Experience</h2>
 
             <div class="container-fluid p-0 resume-lines">
-              <div class="row g-0 resume-lines__item animate-in-up">
-                <div class="col-12 col-md-2">
+              <div class="row g-0 resume-lines__item animate-in-up" style="padding: 2.5rem 0;">
+                <div class="col-12 col-md-3">
                   <span class="resume-lines__date animate-in-up">Jun 2026 - Aug 2026</span>
                 </div>
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-9" style="padding-left: 1.5rem;">
                   <h5 class="resume-lines__title animate-in-up">CRM Developer Intern</h5>
-                  <p class="resume-lines__source animate-in-up">
+                  <p class="resume-lines__source animate-in-up mb-2" style="color: var(--accent); font-weight: 600;">
                     Dynamics Innovations Software LLC (DI)
                   </p>
-                </div>
-                <div class="col-12 col-md-5">
-                  <p class="small resume-lines__descr animate-in-up">
-                    Developed server-side business logic and validations using C# and Dynamics 365 plugins. Built client-side
-                    functionality and customized CRM forms and interfaces using JavaScript and the Xrm Web API.
-                    Implemented business processes for a Property Rental Management System, including contract,
-                    unit, and invoice management. Connected client-side actions with backend processes to automate
-                    contract activation and invoice generation. Worked with Microsoft Dataverse customizations and
-                    security, including users, application users, business units, security roles, and access control.
-                    Extended CRM functionality using Power Automate, Custom Actions, CodeActivity, Command Bar
-                    customization, and REST/API integrations. Gained practical exposure to the Dynamics 365 Sales
-                    process, including Lead and Opportunity management, Business Process Flows, and SSRS reporting.
-                  </p>
+
+                  <div class="d-flex flex-wrap gap-2 my-3 animate-in-up">
+                    <span class="exp-badge"><i class="ph-bold ph-microsoft-teams-logo"></i> Dynamics 365</span>
+                    <span class="exp-badge"><i class="ph-bold ph-hash"></i> C# Plugins</span>
+                    <span class="exp-badge"><i class="ph-bold ph-file-js"></i> JavaScript</span>
+                    <span class="exp-badge"><i class="ph-bold ph-database"></i> .NET Framework</span>
+                    <span class="exp-badge"><i class="ph-bold ph-lightning"></i> ASP.NET Web API</span>
+                  </div>
+                  
+                  <ul class="experience-list animate-in-up" style="list-style: none; padding-left: 0; margin-top: 1.2rem;">
+                    <li style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.8rem;">
+                      <i class="ph-bold ph-check-circle" style="color: var(--accent); font-size: 1.8rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                      <span><strong>Backend Logic & Plugins:</strong> Developed server-side business logic and validations using C# and Dynamics 365 plugins.</span>
+                    </li>
+                    <li style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.8rem;">
+                      <i class="ph-bold ph-check-circle" style="color: var(--accent); font-size: 1.8rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                      <span><strong>Client-Side & Form Customization:</strong> Built client-side functionality and customized CRM forms and interfaces using JavaScript and the Xrm Web API.</span>
+                    </li>
+                    <li style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.8rem;">
+                      <i class="ph-bold ph-check-circle" style="color: var(--accent); font-size: 1.8rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                      <span><strong>Property Rental Management System:</strong> Implemented core business processes including contract, unit, and invoice management. Connected client-side actions with backend processes to automate contract activation and invoice generation.</span>
+                    </li>
+                    <li style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.8rem;">
+                      <i class="ph-bold ph-check-circle" style="color: var(--accent); font-size: 1.8rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                      <span><strong>Dataverse Security & Administration:</strong> Worked with Microsoft Dataverse customizations and security models, including users, application users, business units, security roles, and access control.</span>
+                    </li>
+                    <li style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.8rem;">
+                      <i class="ph-bold ph-check-circle" style="color: var(--accent); font-size: 1.8rem; flex-shrink: 0; margin-top: 0.2rem;"></i>
+                      <span><strong>Process Automation & Sales Workflow:</strong> Extended CRM functionality using Power Automate, Custom Actions, CodeActivity, Command Bar customization, and REST/API integrations. Gained practical exposure to Dynamics 365 Sales processes (Leads, Opportunities, BPFs, SSRS reporting).</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -928,16 +946,8 @@
 
           <!-- Content Block - Achievements Start -->
           <div class="content__block block-large">
-            <!-- H3 Block Start -->
             <h2 class="h2__title animate-in-up">My Achievements</h2>
 
-            <!-- <div class="section-h3">
-              <h3 class="h3__title animate-in-up">My Achievements</h3>
-            </div> -->
-
-            <!-- H3 Block End -->
-
-            <!-- Experience Lines Start -->
             <div class="container-fluid p-0 resume-lines">
               <!-- Achievement Item - JCPC -->
               <div class="row g-0 resume-lines__item animate-in-up">
@@ -977,7 +987,6 @@
                 </div>
               </div>
             </div>
-            <!-- Achievement Lines End -->
           </div>
           <!-- Content Block - Achievements End -->
 
@@ -985,13 +994,6 @@
           <div class="content__block block-large">
             <h2 class="h2__title animate-in-up">My Teaching Experience</h2>
 
-            <!-- H3 Block Start -->
-            <!-- <div class="section-h3">
-              <h3 class="h3__title animate-in-up">My Teaching Experience</h3>
-            </div> -->
-            <!-- H3 Block End -->
-
-            <!-- Experience Lines Start -->
             <div class="container-fluid p-0 resume-lines">
               <!-- Teaching Experience - Digital Logic Design Lecturer -->
               <div class="row g-0 resume-lines__item animate-in-up">
@@ -1014,11 +1016,11 @@
                   </p>
                 </div>
               </div>
-            <!-- Experience Lines End -->
+            </div>
           </div>
           <!-- Content Block - Teaching Experience End -->
 
-                    <!-- Content Block - Programming Languages Start -->
+          <!-- Content Block - Programming Languages Start -->
           <div class="content__block">
             <div class="section-h3 section-h3-grid">
               <h3 class="h3__title animate-in-up">Programming Languages</h3>
@@ -1026,13 +1028,13 @@
           </div>
           <div class="content__block grid-block block-large">
             <div class="tools-cards d-flex justify-content-start flex-wrap">
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">C#</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">C++</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">C</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">JavaScript</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">Dart</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">PHP</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">Python</h6></div></div>
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><img class="tools-cards__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#" /><h6 class="tools-cards__caption animate-in-up">C#</h6></div></div>
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><img class="tools-cards__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++" /><h6 class="tools-cards__caption animate-in-up">C++</h6></div></div>
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><img class="tools-cards__icon" src="img/C_Programming_Language.svg" alt="C" /><h6 class="tools-cards__caption animate-in-up">C</h6></div></div>
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><img class="tools-cards__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" /><h6 class="tools-cards__caption animate-in-up">JavaScript</h6></div></div>
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><img class="tools-cards__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" alt="Dart" /><h6 class="tools-cards__caption animate-in-up">Dart</h6></div></div>
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><img class="tools-cards__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP" /><h6 class="tools-cards__caption animate-in-up">PHP</h6></div></div>
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><img class="tools-cards__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" /><h6 class="tools-cards__caption animate-in-up">Python</h6></div></div>
             </div>
           </div>
 
@@ -1044,38 +1046,149 @@
           </div>
           <div class="content__block grid-block block-large">
             <div class="tools-cards d-flex justify-content-start flex-wrap">
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">Dynamics 365</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">.NET Framework</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">ASP.NET Web API</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">SQL</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">HTML</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">CSS</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">Flutter</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">Git</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">GitHub</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">Artificial Intelligence</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">Grey Wolf Optimizer</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">Constraint Satisfaction</h6></div></div>
-              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><h6 class="tools-cards__caption animate-in-up">Multi-Objective Optimization</h6></div></div>
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><img class="tools-cards__icon" src="img/dynamics365.svg" alt="Dynamics 365" /><h6 class="tools-cards__caption animate-in-up">Dynamics 365</h6></div></div>
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><img class="tools-cards__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" alt=".NET Framework" /><h6 class="tools-cards__caption animate-in-up">.NET Framework</h6></div></div>
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><img class="tools-cards__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-plain-wordmark.svg" alt="ASP.NET Web API" /><h6 class="tools-cards__caption animate-in-up">ASP.NET Web API</h6></div></div>
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><img class="tools-cards__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="SQL" /><h6 class="tools-cards__caption animate-in-up">SQL</h6></div></div>
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><img class="tools-cards__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" /><h6 class="tools-cards__caption animate-in-up">HTML</h6></div></div>
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><img class="tools-cards__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" /><h6 class="tools-cards__caption animate-in-up">CSS</h6></div></div>
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><img class="tools-cards__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter" /><h6 class="tools-cards__caption animate-in-up">Flutter</h6></div></div>
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><img class="tools-cards__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" /><h6 class="tools-cards__caption animate-in-up">Git</h6></div></div>
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5"><div class="tools-cards__card"><img class="tools-cards__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" /><h6 class="tools-cards__caption animate-in-up">GitHub</h6></div></div>
             </div>
           </div>
 
-<!-- Additional LinkedIn Information Start -->
-          <div class="content__block block-large">
+          <!-- Content Block - Licenses & Certifications Start -->
+          <div id="certifications" class="content__block block-large">
             <h2 class="h2__title animate-in-up">Licenses & Certifications</h2>
-            <div class="container-fluid p-0 resume-lines">
-              <div class="row g-0 resume-lines__item animate-in-up">
-                <div class="col-12 col-md-2"><span class="resume-lines__date animate-in-up">Oct 2025</span></div>
-                <div class="col-12 col-md-5"><h5 class="resume-lines__title animate-in-up">Intro to Machine Learning</h5><p class="resume-lines__source animate-in-up">Kaggle</p></div>
-                <div class="col-12 col-md-5"><p class="small resume-lines__descr animate-in-up">Introduction to machine learning concepts and practical Python-based learning.</p></div>
-              </div>
-              <div class="row g-0 resume-lines__item animate-in-up">
-                <div class="col-12 col-md-2"><span class="resume-lines__date animate-in-up">Jul 2025</span></div>
-                <div class="col-12 col-md-5"><h5 class="resume-lines__title animate-in-up">Meta Front-End Developer Specialization</h5><p class="resume-lines__source animate-in-up">Meta</p></div>
-                <div class="col-12 col-md-5"><p class="small resume-lines__descr animate-in-up">Front-end development specialization covering JavaScript and modern web development foundations.</p></div>
-              </div>
+
+            <div class="container-fluid p-0 resume-lines my-gallery">
+              <!-- Cert 1: Kaggle ML -->
+              <figure class="row g-0 resume-lines__item animate-in-up" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <div class="col-12 col-md-2">
+                  <span class="resume-lines__date animate-in-up">Oct 2025</span>
+                </div>
+                <div class="col-12 col-md-5">
+                  <h5 class="resume-lines__title animate-in-up">Intro to Machine Learning</h5>
+                  <p class="resume-lines__source animate-in-up">Kaggle</p>
+                </div>
+                <div class="col-12 col-md-5">
+                  <p class="small resume-lines__descr animate-in-up" style="margin-bottom: 0.5rem;">
+                    Introduction to machine learning concepts and practical Python-based learning. Skills: Python, Machine Learning.
+                  </p>
+                  <div class="cert-actions animate-in-up">
+                    <button class="cert-action-btn" data-cert-img="img/certifications/kaggle.png">
+                      <i class="ph-bold ph-image-square"></i>
+                      <span>View certificate</span>
+                    </button>
+                  </div>
+                </div>
+                <figcaption class="gallery__descr opposite d-none" itemprop="caption description">Intro to Machine Learning — Kaggle</figcaption>
+              </figure>
+
+              <!-- Cert 2: Meta Front-End -->
+              <figure class="row g-0 resume-lines__item animate-in-up" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <div class="col-12 col-md-2">
+                  <span class="resume-lines__date animate-in-up">Jul 2025</span>
+                </div>
+                <div class="col-12 col-md-5">
+                  <h5 class="resume-lines__title animate-in-up">Meta Front-End Developer Specialization</h5>
+                  <p class="resume-lines__source animate-in-up">Meta</p>
+                </div>
+                <div class="col-12 col-md-5">
+                  <p class="small resume-lines__descr animate-in-up" style="margin-bottom: 0.5rem;">
+                    Front-end development specialization covering JavaScript and modern web development foundations. Credential ID SQOZQDD44DB7.
+                  </p>
+                  <div class="cert-actions animate-in-up">
+                    <a href="https://www.coursera.org/account/accomplishments/specialization/SQOZQDD44DB7" target="_blank" rel="noopener noreferrer" class="cert-action-btn">
+                      <span>Show credential</span>
+                    </a>
+                    <button class="cert-action-btn" data-cert-img="img/certifications/meta.png">
+                      <i class="ph-bold ph-image-square"></i>
+                      <span>View certificate</span>
+                    </button>
+                  </div>
+                </div>
+                <figcaption class="gallery__descr opposite d-none" itemprop="caption description">Meta Front-End Developer Specialization — Coursera</figcaption>
+              </figure>
+
+              <!-- Cert 3: AWS Cloud Foundations -->
+              <figure class="row g-0 resume-lines__item animate-in-up" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <div class="col-12 col-md-2">
+                  <span class="resume-lines__date animate-in-up">Mar 2025</span>
+                </div>
+                <div class="col-12 col-md-5">
+                  <h5 class="resume-lines__title animate-in-up">AWS Academy Cloud Foundations</h5>
+                  <p class="resume-lines__source animate-in-up">Amazon Web Services (AWS)</p>
+                </div>
+                <div class="col-12 col-md-5">
+                  <p class="small resume-lines__descr animate-in-up" style="margin-bottom: 0.5rem;">
+                    Foundational course covering core AWS cloud concepts and services.
+                  </p>
+                  <div class="cert-actions animate-in-up">
+                    <a href="https://www.credly.com/badges/cbe38519-a170-4cfc-b027-9120dac8758c/linked_in_profile" target="_blank" rel="noopener noreferrer" class="cert-action-btn">
+                      <span>Show credential</span>
+                    </a>
+                    <button class="cert-action-btn" data-cert-img="img/certifications/aws.png">
+                      <i class="ph-bold ph-image-square"></i>
+                      <span>View certificate</span>
+                    </button>
+                  </div>
+                </div>
+                <figcaption class="gallery__descr opposite d-none" itemprop="caption description">AWS Academy Cloud Foundations — AWS</figcaption>
+              </figure>
+
+              <!-- Cert 4: Huawei Computer Network -->
+              <figure class="row g-0 resume-lines__item animate-in-up" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <div class="col-12 col-md-2">
+                  <span class="resume-lines__date animate-in-up">Mar 2025</span>
+                </div>
+                <div class="col-12 col-md-5">
+                  <h5 class="resume-lines__title animate-in-up">Computer Network</h5>
+                  <p class="resume-lines__source animate-in-up">Huawei</p>
+                </div>
+                <div class="col-12 col-md-5">
+                  <p class="small resume-lines__descr animate-in-up" style="margin-bottom: 0.5rem;">
+                    Computer networking fundamentals. Credential ID ICT20250308001926.
+                  </p>
+                  <div class="cert-actions animate-in-up">
+                    <button class="cert-action-btn" data-cert-img="img/certifications/huawei.png">
+                      <i class="ph-bold ph-image-square"></i>
+                      <span>View certificate</span>
+                    </button>
+                  </div>
+                </div>
+                <figcaption class="gallery__descr opposite d-none" itemprop="caption description">Computer Network — Huawei</figcaption>
+              </figure>
+
+              <!-- Cert 5: Udemy Flutter & Dart -->
+              <figure class="row g-0 resume-lines__item animate-in-up" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <div class="col-12 col-md-2">
+                  <span class="resume-lines__date animate-in-up">Feb 2025</span>
+                </div>
+                <div class="col-12 col-md-5">
+                  <h5 class="resume-lines__title animate-in-up">Flutter & Dart - The Complete Guide</h5>
+                  <p class="resume-lines__source animate-in-up">Udemy</p>
+                </div>
+                <div class="col-12 col-md-5">
+                  <p class="small resume-lines__descr animate-in-up" style="margin-bottom: 0.5rem;">
+                    Full course on building cross-platform mobile apps with Flutter and Dart.
+                  </p>
+                  <div class="cert-actions animate-in-up">
+                    <a href="https://www.udemy.com/certificate/UC-b48ca0d2-41cd-40d5-888b-d98707bce087/" target="_blank" rel="noopener noreferrer" class="cert-action-btn">
+                      <span>Show credential</span>
+                    </a>
+                    <button class="cert-action-btn" data-cert-img="img/certifications/udemy.png">
+                      <i class="ph-bold ph-image-square"></i>
+                      <span>View certificate</span>
+                    </button>
+                  </div>
+                </div>
+                <figcaption class="gallery__descr opposite d-none" itemprop="caption description">Flutter & Dart - The Complete Guide — Udemy</figcaption>
+              </figure>
             </div>
           </div>
+          <!-- Content Block - Licenses & Certifications End -->
 
           <div class="content__block block-large">
             <h2 class="h2__title animate-in-up">Volunteering</h2>
@@ -1365,6 +1478,201 @@
         });
       }
 
+      <!-- Phone -->
+      <div class="socials-cards__item d-flex grid-item-s animate-card-5">
+        <div class="socials-cards__card">
+          <i class="ph-bold ph-phone"></i>
+
+          <a
+            class="socials-cards__link"
+            href="tel:+962775083681"
+          ></a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- Contact Section End -->
+
+          <!-- Content Block - Teaser Start -->
+          <div class="content__block">
+            <div class="teaser">
+              <p class="teaser__text animate-in-up">
+                <a
+                  class="text-link-bold"
+                  href="mailto:sami.a.touq@gmail.com?subject=Message%20from%20your%20portfolio"
+                ></a>
+              </p>
+            </div>
+          </div>
+          <!-- Content Block - Teaser End -->
+
+          <!-- Content Block - Contact Data Start -->
+          <div class="content__block">
+            <div class="container-fluid p-0 contact-lines animate-in-up">
+              <div class="row g-0 contact-lines__item">
+                <!-- data item -->
+                <div class="col-12 col-md-4 contact-lines__data">
+                  <p class="contact-lines__title animate-in-up">Location</p>
+                  <p class="contact-lines__text animate-in-up">
+                    <a
+                      class="text-link-bold"
+                      href="https://maps.google.com/?q=Amman,+Jordan"
+                      target="_blank"
+                      >Amman, Jordan</a
+                    >
+                  </p>
+                </div>
+                <!-- data item -->
+                <div class="col-12 col-md-4 contact-lines__data">
+                  <p class="contact-lines__title animate-in-up">Phone</p>
+                  <p class="contact-lines__text animate-in-up">
+                    <a class="text-link-bold" href="tel:+962775083681"
+                      >+962 77 508 3681</a
+                    >
+                  </p>
+                </div>
+                <!-- data item -->
+                <div class="col-12 col-md-4 contact-lines__data">
+                  <p class="contact-lines__title animate-in-up">Email</p>
+                  <p class="contact-lines__text animate-in-up">
+                    <a
+                      class="text-link-bold"
+                      href="mailto:sami.a.touq@gmail.com"
+                      >sami.a.touq@gmail.com</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Content Block - Contact Data End -->
+        </section>
+      </div>
+    </div>
+    <!-- Page Content End -->
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <!-- Background of PhotoSwipe.
+      It's a separate element, as animating opacity is faster than rgba(). -->
+      <div class="pswp__bg"></div>
+
+      <!-- Slides wrapper with overflow:hidden. -->
+      <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <!--  Controls are self-explanatory. Order can be changed. -->
+
+            <div class="pswp__counter"></div>
+
+            <button
+              class="pswp__button pswp__button--close link-s"
+              title="Close (Esc)"
+            ></button>
+
+            <!-- <button
+              class="pswp__button pswp__button--share link-s"
+              title="Share"
+            ></button> -->
+
+            <!-- <button
+              class="pswp__button pswp__button--fs link-s"
+              title="Toggle fullscreen"
+            ></button>
+
+            <button
+              class="pswp__button pswp__button--zoom link-s"
+              title="Zoom in/out"
+            ></button> -->
+
+            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+            <!-- element will get class pswp__preloader-active when preloader is running -->
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+          >
+            <div class="pswp__share-tooltip"></div>
+          </div>
+
+          <button
+            class="pswp__button pswp__button--arrow--left link-s"
+            title="Previous (arrow left)"
+          ></button>
+
+          <button
+            class="pswp__button pswp__button--arrow--right link-s"
+            title="Next (arrow right)"
+          ></button>
+
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load Scripts Start -->
+    <script src="js/libs.min.js"></script>
+    <script>
+      const randomX = random(-400, 400);
+      const randomY = random(-200, 200);
+      const randomDelay = random(0, 50);
+      const randomTime = random(20, 40);
+      const randomTime2 = random(5, 12);
+      const randomAngle = random(-30, 150);
+
+      const blurs = gsap.utils.toArray(".blur");
+      blurs.forEach((blur) => {
+        gsap.set(blur, {
+          x: randomX(-1),
+          y: randomX(1),
+          rotation: randomAngle(-1),
+        });
+
+        moveX(blur, 1);
+        moveY(blur, -1);
+        rotate(blur, 1);
+      });
+
+      function rotate(target, direction) {
+        gsap.to(target, randomTime2(), {
+          rotation: randomAngle(direction),
+          ease: Sine.easeInOut,
+          onComplete: rotate,
+          onCompleteParams: [target, direction * -1],
+        });
+      }
+
+      function moveX(target, direction) {
+        gsap.to(target, randomTime(), {
+          x: randomX(direction),
+          ease: Sine.easeInOut,
+          onComplete: moveX,
+          onCompleteParams: [target, direction * -1],
+        });
+      }
+
       function moveY(target, direction) {
         gsap.to(target, randomTime(), {
           y: randomY(direction),
@@ -1381,6 +1689,57 @@
     </script>
     <script src="js/app.js"></script>
     <script src="js/gallery-init.js"></script>
+
+    <!-- Custom Certificate Lightbox Modal (Tightly wraps exact image size) -->
+    <div id="cert-modal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.85); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); align-items:center; justify-content:center; padding:2rem;">
+      <div id="cert-modal-box" style="position:relative; display:inline-flex; width:fit-content; height:fit-content; max-width:92vw; max-height:88vh;">
+        <button id="cert-modal-close" aria-label="Close" style="position:absolute; top:-16px; right:-16px; background:#ffffff; color:#111111; border:2px solid rgba(255,255,255,0.8); border-radius:50%; width:38px; height:38px; font-size:20px; font-weight:bold; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 20px rgba(0,0,0,0.6); z-index:10; transition:transform 0.2s ease;">&#x2715;</button>
+        <img id="cert-modal-img" src="" alt="Certificate" style="display:block; max-width:92vw; max-height:85vh; width:auto; height:auto; border-radius:14px; box-shadow:0 24px 60px rgba(0,0,0,0.8); object-fit:contain;" />
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        var modal    = document.getElementById('cert-modal');
+        var modalImg = document.getElementById('cert-modal-img');
+        var closeBtn = document.getElementById('cert-modal-close');
+
+        // Open modal when any [data-cert-img] button is clicked
+        document.addEventListener('click', function(e) {
+          var btn = e.target.closest('[data-cert-img]');
+          if (!btn) return;
+          e.preventDefault();
+          modalImg.src = btn.getAttribute('data-cert-img');
+          modal.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        });
+
+        // Close on X button
+        closeBtn.addEventListener('click', function() {
+          modal.style.display = 'none';
+          modalImg.src = '';
+          document.body.style.overflow = '';
+        });
+
+        // Close on backdrop click
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal || e.target.id === 'cert-modal-box') {
+            modal.style.display = 'none';
+            modalImg.src = '';
+            document.body.style.overflow = '';
+          }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && modal.style.display === 'flex') {
+            modal.style.display = 'none';
+            modalImg.src = '';
+            document.body.style.overflow = '';
+          }
+        });
+      })();
+    </script>
     <!-- Load Scripts End -->
   </body>
 </html>
