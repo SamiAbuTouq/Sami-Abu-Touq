@@ -1,0 +1,4 @@
+# /cv is not a file. Without 404.html, Pages SPA fallback would serve index.html (soft 404).
+# Do not add a /* /index.html 200 rule — that recreates the same problem.
+/cv /cv-page.html 301
+/cv/ /cv-page.html 301

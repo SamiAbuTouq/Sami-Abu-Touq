@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./shell.css";
 
-const siteUrl = "https://samiabutouq.dpdns.org";
+const siteUrl = "https://sami-abu-touq.pages.dev";
 const title = "Sami Abu Touq | Software Developer & CS Graduate (PSUT)";
 const description =
   "Sami Abu Touq is a software developer and Computer Science graduate from Princess Sumaya University for Technology (PSUT). Former Dynamics CRM Developer Intern at DI. Portfolio of Flutter, web, Python, C++, and .NET projects.";
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "portfolio",
   ],
   robots: { index: true, follow: true },
-  alternates: { canonical: siteUrl },
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",

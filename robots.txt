@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://samiabutouq.dpdns.org/sitemap.xml
+Sitemap: https://sami-abu-touq.pages.dev/sitemap.xml
